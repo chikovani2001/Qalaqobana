@@ -29,14 +29,15 @@
 				<div class="login100-pic js-tilt" data-tilt>
 					<img src="images/4.jpg" alt="IMG">
 				</div>
-
-				<form class="login100-form validate-form">
+				<form id="login" class="login100-form validate-form">
 					<span class="login100-form-title">
 						ავტორიზაცია
 					</span>
-
+					<div id="unautorized" class="alert alert-danger fade hide" role="alert">
+					არასწორიხარ
+				</div>
 					<div class="wrap-input100 validate-input" data-validate = "მითითებული მაილი არასწორია!">
-						<input class="input100" type="text" name="email" placeholder="მაილი">
+						<input id="username" class="input100" type="text" name="email" placeholder="მაილი">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-envelope" aria-hidden="true"></i>
@@ -44,7 +45,7 @@
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate = "მითითებული პაროლი არასწორია">
-						<input class="input100" type="password" name="pass" placeholder="პაროლი">
+						<input id="password" class="input100" type="password" name="pass" placeholder="პაროლი">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-lock" aria-hidden="true"></i>
@@ -52,8 +53,8 @@
 					</div>
 					
 					<div class="container-login100-form-btn">
-						<button class="login100-form-btn">
-							<a href="/main.html"> შესვლა </a>
+						<button id="submit" type="submit" class="login100-form-btn">
+							შესვლა
 						</button>
 					</div>
 
@@ -65,7 +66,7 @@
 							მომხმარებელი / პაროლი?
 						</a>
 					</div>
-						
+
 					<div class="text-center p-t-136">
 						<a class="txt2" href="registration.html">
 							რეგისტრაცია
@@ -73,13 +74,14 @@
 						</a>
 					</div>
 				</form>
+				
 			</div>
 		</div>
 	</div>
 	
 	
 
-	
+	<script type="module" src="/js/login.js"></script>
 <!--===============================================================================================-->	
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->

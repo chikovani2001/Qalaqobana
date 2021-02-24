@@ -1,5 +1,6 @@
 // Credit: Mateusz Rybczonec
 
+
 const FULL_DASH_ARRAY = 283;
 const WARNING_THRESHOLD = 10;
 const ALERT_THRESHOLD = 5;
@@ -66,18 +67,66 @@ let stop = document.querySelector('#stop')
 stop.onclick = function(){
   stopTimer();
   document.getElementById("name").readOnly = true;
+  let variable = document.querySelector('#name').value;
+  localStorage.setItem('name', `${variable}`)
+
   document.getElementById("lastName").readOnly = true;
+  let variable1 = document.querySelector('#lastName').value;
+  localStorage.setItem('lastName', `${variable1}`)
+
   document.getElementById("country").readOnly = true;
+  let variable2 = document.querySelector('#country').value;
+  localStorage.setItem('country', `${variable2}`)
+
   document.getElementById("city").readOnly = true;
+  let variable3 = document.querySelector('#city').value;
+  localStorage.setItem('city', `${variable3}`)
+
   document.getElementById("animal").readOnly = true;
+  let variable4 = document.querySelector('#animal').value;
+  localStorage.setItem('animal', `${variable4}`)
+
   document.getElementById("plant").readOnly = true;
+  let variable5 = document.querySelector('#plant').value;
+  localStorage.setItem('plant', `${variable5}`)
 }
 
 let more = document.querySelector('#more')
 more.onclick = function(){
   resetTimer();
-
 } 
+
+function eyeFunc(){
+  let names = localStorage.getItem("name");
+  document.getElementById("name").value = `${names}`;
+  
+
+  let lastNames = localStorage.getItem("lastName");
+  document.getElementById("lastName").value = `${lastNames}`;
+
+  let countrys = localStorage.getItem("country");
+  document.getElementById("country").value = `${countrys}`;
+  
+  let citys = localStorage.getItem("city");
+  document.getElementById("city").value = `${citys}`;
+  
+  let animals = localStorage.getItem("animal");
+  document.getElementById("animal").value = `${animals}`;
+  
+  let plants = localStorage.getItem("plant");
+  document.getElementById("plant").value = `${plants}`;  
+}
+
+let eye = document.querySelector('#eye')
+eye.onclick = function(){
+  eyeFunc();
+}
+
+
+
+
+
+
 let stop1 = document.querySelector('#stop1')
 stop1.onclick = function(){
   stopTimer();
@@ -91,7 +140,7 @@ stop1.onclick = function(){
 
 let more1 = document.querySelector('#more1')
 more1.onclick = function(){
-  // resetTimer();
+  resetTimer();
 }
 let stop2 = document.querySelector('#stop2')
 stop2.onclick = function(){
@@ -106,7 +155,7 @@ stop2.onclick = function(){
 
 let more2 = document.querySelector('#more2')
 more2.onclick = function(){
-  // resetTimer();
+  resetTimer();
 }
 let stop3 = document.querySelector('#stop3')
 stop3.onclick = function(){
@@ -121,24 +170,8 @@ stop3.onclick = function(){
 
 let more3 = document.querySelector('#more3')
 more3.onclick = function(){
-  // resetTimer();
+  resetTimer();
 }
-let stop4 = document.querySelector('#stop4')
-stop.onclick = function(){
-  stopTimer();
-  document.getElementById("name4").readOnly = true;
-  document.getElementById("lastName4").readOnly = true;
-  document.getElementById("country4").readOnly = true;
-  document.getElementById("city4").readOnly = true;
-  document.getElementById("animal4").readOnly = true;
-  document.getElementById("plant4").readOnly = true;
-}
-
-let more4 = document.querySelector('#more4')
-more4.onclick = function(){
-  // resetTimer();
-}
-
 
 function onTimesUp() {
   clearInterval(timerInterval);
@@ -259,5 +292,10 @@ function randomLeter(letters) {
 }
 
 document.querySelector("#demo").innerHTML = randomLeter(letters);
-console.log(randomLeter(letters))
+
+
+
+
+
+
 

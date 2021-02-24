@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "username": "suka@mail.ru",
+      "password": "123456",
+      "born": "02/02/2021",
+      "id": 1
+    },
+    {
+      "username": "kuta@mail.ru",
+      "password": "123456",
+      "born": "25/02/2001",
+      "id": 2
+    }
+  ]
+}
