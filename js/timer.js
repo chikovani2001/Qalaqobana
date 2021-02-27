@@ -63,12 +63,18 @@ finish.onclick = function() {
   window.location.reload();
 }
 
+let trueVariable = "10";
+let trueOnlyVariable = "15";
+let falseVariable = "0";
+
+
 let stop = document.querySelector('#stop')
 stop.onclick = function(){
   stopTimer();
   document.getElementById("name").readOnly = true;
   let variable = document.querySelector('#name').value;
   localStorage.setItem('name', `${variable}`)
+
 
   document.getElementById("lastName").readOnly = true;
   let variable1 = document.querySelector('#lastName').value;
@@ -89,89 +95,148 @@ stop.onclick = function(){
   document.getElementById("plant").readOnly = true;
   let variable5 = document.querySelector('#plant').value;
   localStorage.setItem('plant', `${variable5}`)
+
+  document.getElementById("sumOf").readOnly = true;
+  let variable6 = document.querySelector('#sumOf').value;
+  localStorage.setItem('sumOf', `${variable6}`)
+
 }
 
 let more = document.querySelector('#more')
 more.onclick = function(){
-  resetTimer();
+  addDiv();
+  readByElements();
+  eyeFunc();
 } 
+let refreshGame = document.querySelector('#refreshGame')
+refreshGame.onclick = function(){
+  resetTimer();
+}
+// const mahi_holder = document.querySelector('.mahi_holder').value;
+// const append = document.querySelector('.append')
+// const div = document.createElement('div')
+// div.textContent = "aqanea smn"
+// div.appendChild(div, mahi_holder)
+// append.appendChild(div)
+
+
+function addDiv() {
+  const row = document.querySelectorAll('.container');
+  row.forEach(rows => {
+    var objTo = document.getElementById('container1');
+    var divtest = document.createElement("div");
+    console.log(rows);
+    divtest.innerHTML = rows.innerHTML;
+    objTo.append(divtest);
+  })
+
+};
+
+
+
+
+let gio = trueOnlyVariable;
+let goshadze = trueVariable;
+let gana = trueOnlyVariable;
+let gori = trueVariable;
+let gorila = trueVariable;
+let gogra = trueVariable;
 
 function eyeFunc(){
   let names = localStorage.getItem("name");
-  document.getElementById("name").value = `${names}`;
+  if(names == "გიო"){
+    let gio = trueOnlyVariable;
+    document.getElementById("name").value = `${names} ${gio}`;
+
+  }else{
+    let gio = falseVariable;
+    document.getElementById("name").value = `${names} ${gio}`;
+
+  }
   
 
   let lastNames = localStorage.getItem("lastName");
-  document.getElementById("lastName").value = `${lastNames}`;
+  if(lastNames == "გოშაძე"){
+    let goshadze = trueVariable;
+
+    document.getElementById("lastName").value = `${lastNames} ${goshadze}`;
+
+  }else{
+    let goshadze = falseVariable;
+    document.getElementById("lastName").value = `${lastNames} ${goshadze}`;
+
+  }
 
   let countrys = localStorage.getItem("country");
-  document.getElementById("country").value = `${countrys}`;
+  if(countrys == "განა"){
+    let gana = trueOnlyVariable;
+    document.getElementById("country").value = `${countrys} ${gana}`;
+
+  }else{
+    let gana = falseVariable;
+    document.getElementById("country").value = `${countrys} ${gana}`;
+
+  }
   
   let citys = localStorage.getItem("city");
-  document.getElementById("city").value = `${citys}`;
+  if(citys == "გორი"){
+    let gori = trueVariable;
+    document.getElementById("city").value = `${citys} ${gori}`;
+
+  }else{
+    let gori = falseVariable;
+    document.getElementById("city").value = `${citys} ${gori}`;
+
+  }
   
   let animals = localStorage.getItem("animal");
-  document.getElementById("animal").value = `${animals}`;
+  if(animals == "გორილა"){
+    let gorila = trueVariable;
+    document.getElementById("animal").value = `${animals} ${gorila}`;
+
+  }else{
+    let gorila = falseVariable;
+    document.getElementById("animal").value = `${animals} ${gorila}`;
+
+  }
   
   let plants = localStorage.getItem("plant");
-  document.getElementById("plant").value = `${plants}`;  
+  if(plants == "გოგრა"){
+    let gogra = trueVariable;
+    document.getElementById("plant").value = `${plants} ${gogra}`;
+
+  }else{
+    let gogra = falseVariable;
+    document.getElementById("plant").value = `${plants} ${gogra}`;
+  
+  }
+  let sum = Number(gio) +Number(goshadze) +Number(gana) +Number(gori)+Number(gorila)+Number(gogra)
+  console.log(sum)
+  
 }
 
-let eye = document.querySelector('#eye')
-eye.onclick = function(){
-  eyeFunc();
+  
+  
+
+
+
+
+
+// let eye = document.querySelector('#eye')
+// eye.onclick = function(){
+//   eyeFunc();
+//   readByElements();
+
+// }
+function readByElements(){
+  document.getElementById("name").readOnly = true;
+  document.getElementById("lastName").readOnly = true;
+  document.getElementById("country").readOnly = true;
+  document.getElementById("city").readOnly = true;
+  document.getElementById("animal").readOnly = true;
+  document.getElementById("plant").readOnly = true;
 }
 
-
-
-
-
-
-let stop1 = document.querySelector('#stop1')
-stop1.onclick = function(){
-  stopTimer();
-  document.getElementById("name1").readOnly = true;
-  document.getElementById("lastName1").readOnly = true;
-  document.getElementById("country1").readOnly = true;
-  document.getElementById("city1").readOnly = true;
-  document.getElementById("animal1").readOnly = true;
-  document.getElementById("plan1t").readOnly = true;
-}
-
-let more1 = document.querySelector('#more1')
-more1.onclick = function(){
-  resetTimer();
-}
-let stop2 = document.querySelector('#stop2')
-stop2.onclick = function(){
-  stopTimer();
-  document.getElementById("name2").readOnly = true;
-  document.getElementById("lastName2").readOnly = true;
-  document.getElementById("country2").readOnly = true;
-  document.getElementById("city2").readOnly = true;
-  document.getElementById("animal2").readOnly = true;
-  document.getElementById("plant2").readOnly = true;
-}
-
-let more2 = document.querySelector('#more2')
-more2.onclick = function(){
-  resetTimer();
-}
-let stop3 = document.querySelector('#stop3')
-stop3.onclick = function(){
-  stopTimer();
-  document.getElementById("name3").readOnly = true;
-  document.getElementById("lastName3").readOnly = true;
-  document.getElementById("country3").readOnly = true;
-  document.getElementById("city3").readOnly = true;
-  document.getElementById("animal3").readOnly = true;
-  document.getElementById("plant3").readOnly = true;
-}
-
-let more3 = document.querySelector('#more3')
-more3.onclick = function(){
-  resetTimer();
-}
 
 function onTimesUp() {
   clearInterval(timerInterval);
