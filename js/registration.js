@@ -22,5 +22,3 @@ fetch('POST', '/users',user)
     }
 })
 })
-
-    

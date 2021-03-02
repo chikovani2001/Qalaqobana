@@ -64,10 +64,6 @@ finish.onclick = function() {
 }
 
 
-// inputs
-// let trueVariable = 10;
-// let falseVariable = 0;
-
 
 let stop = document.querySelector('#stop')
 stop.onclick = function(){
@@ -135,76 +131,80 @@ function addDiv() {
 
 
 
-// sums , gets items from local storage and cheks with db.json
+// sums , gets items from local storage and cheks if inputs are right 
 function eyeFunc(){
   const names = localStorage.getItem("name");
-  if(names == "გიო"){
-    gio = 10;
-    document.getElementById("name").value = `${names} ${gio}`;
+  if(names == "გიო" || names == "ვასო" || names == "ანასტასია"||names == "ავთო" || names == "აანდრო" ||names == "ანა" ||names == "ალექსი" ||names == "ბაჩო"||names == "ბადრი" ||names == "ბონდო" ||names == "ბესიკა" ||names == "გიო" ||names == "გოზანოყი" ||names == "გია" ||names == "გენადი" ||names == "გარი"||names == "დათო"||names == "დიმიტრი"||names == "დიანა"||names == "დურმიშხანი"||names == "ეკა"||names == "ელენე"||names == "ელისო"||names == "ერთაოზი"||names == "ელიზბარი"||names == "ვანო"||names == "ვერა"||names == "ვატო"||names == "ვიკა"||names == "ვაჟა"||names == "ზაზა"||names == "ზვიადი"||names == "ზაირა"||names == "ზურა"||names == "თემო"||names == "თამარი"||names == "თიკო"||names == "თორნიკე"||names == "ირა"||names == "ირაკლი"||names == "იპოლიტე"||names == "ია"||names == "კახა"||names == "კოკი"||names == "კაკო"||names == "ლია"||names == "ლაშა"||names == "ლიზი"||names == "ლევანი"||names == "ლუკა"||names == "მანჩო"||names == "მარი"||names == "მანუჩარი"||names == "მიშო"||names == "ნინო"||names == "ნატო"||names == "ნანა"||names == "ნიკა"||names == "ომარი"||names == "ოლგა"||names == "ოლეგი"||names == "ოთო"||names == "ოთარი"||names == "გიორგი"||names == "პაატა"||names == "პავლე"||names == "ჟორა"||names == "ჟანა"||names == "რუსა"||names == "რუსიკო"||names == "რატი"||names == "რამაზი"||names == "სოსო"||names == "სიკო"||names == "სოლომონი"||names == "სალომე"||names == "ტარიელი"||names == "ტასო"||names == "ტატო"||names == "უშანგი"||names == "უტა"||names == "უჩა"||names == "ფატი"||names == "ფაბრიციო"||names == "ფარსმანი"||names == "ქეთევანი"||names == "ქეთი"||names == "ქაიხოსრო"||names == "ქართლოსი"||names == "ღვთისო"||names == "ყარამანი"||names == "ყუთლუ"||names == "შოთა"||names == "შორენა"||names == "ჩიქო"||names == "ჩიორა"||names == "ჩობანო"||names == "ციცო"||names == "ცოტნე"||names == "ციური"||names == "ცოცორი"||names == "ციალა"||names == "ცუციკი"||names == "ძაბული"||  names == "წ" ||names == "ჭ"||names == "ჭიჭიკო"||names == "ჭიაბერი"||names == "ჯონი"||names == "ჯარჯი"||names == "ჯემალა"||names == "ჯაბა"||names == "ხატია"||names == "ხათუნა"||names == "ხუივოზნაეტ"||names == "ხორხე"||names == "ჰამლეტი"|| names == "ჰარი"||names == "ჰერაკლე"){
+    val1 = 10;
+    document.getElementById("name").value = `${names} ${val1}`;
 
 
   }else{
-    gio = 0;
-    document.getElementById("name").value = `${names} ${gio}`;
+    val1 = 0;
+    document.getElementById("name").value = `${names} ${val1}`;
   }
   
 
   const lastNames = localStorage.getItem("lastName");
-  if(lastNames == "გოშაძე"){
-    goshadze = 10;
-    document.getElementById("lastName").value = `${lastNames} ${goshadze}`;
+  if(lastNames == "ირემაძე" || lastNames == "იაკობიძე" || lastNames == "იოსელიანი"|| lastNames == "აბაშიძე"|| lastNames == "ადამია"|| lastNames == "ასანიძე"|| lastNames == "აბაშიძე"|| lastNames == "ბაქრაძე"|| lastNames == "ბარათაშვილი"|| lastNames == "ბესელია"|| lastNames == "ბუაძე"|| lastNames == "გაგუა"|| lastNames == "გაბუნია"|| lastNames == "გიორგობიანი"|| lastNames == "გოშაძე"|| lastNames == "დადიანი"|| lastNames == "დავითაშვილი"|| lastNames == "დეისაძე"|| lastNames == "დევდარიანი"|| lastNames == "ერისთავი"|| lastNames == "ელბაქიძე"|| lastNames == "ელისაშვილი"|| lastNames == "ვაჩაძე"|| lastNames == "ვერიშვილი"|| lastNames == "ზურაბიშვილი"|| lastNames == "ზაალიშვილი"|| lastNames == "ზვიადაური"|| lastNames == "თაბაგარი"|| lastNames == "თოდუა"|| lastNames == "კაკაბაძე"|| lastNames == "კოპალიანი"|| lastNames == "კიკნაძე"|| lastNames == "ლიპარტელიანი"|| lastNames == "ლომსაძე"|| lastNames == "ლომიძე"|| lastNames == "მაჭავარიანი"|| lastNames == "მუმლაძე"|| lastNames == "ნაჭყებია"|| lastNames == "ნაკაშიძე"|| lastNames == "ონიანი"|| lastNames == "ორბელიანი"|| 
+  lastNames == "პაპიძე"|| lastNames == "პაპუნაშვილი"|| lastNames == "ჟვანია"|| lastNames == "ჟორდანია"|| lastNames == "რუხაძე"|| lastNames == "როდონაია"|| lastNames == "სანაია"|| lastNames == "სიჭინავა"|| lastNames == "ტაბიძე"|| lastNames == "ტყებუჩავა"|| lastNames == "უსუფაშვილი"|| lastNames == "ფალავანდიშვილი"|| lastNames == "ფრუიძე"|| lastNames == "ქეცბაია"|| lastNames == "ქემოკლიძე"|| lastNames == "ღოღობერიძე"|| lastNames == "ღვინია"|| lastNames == "ყიფიანი"|| lastNames == "ყიშიძე"|| lastNames == "შენგელია"|| lastNames == "შერმადინი"|| lastNames == "ჩოხელი"|| lastNames == "ჩიქოვანი"|| lastNames == "ქოიავა"|| lastNames == "ცქვიტაია"|| lastNames == "ციციშვილი"|| lastNames == "ძაგანია"|| lastNames == "ძებნიაური"|| lastNames == "წოწონავა"|| lastNames == "წივწივაძე"|| lastNames == "ჭკადუა"|| lastNames == "ჭუმბურიძე"|| lastNames == "ხურცილავა"|| lastNames == "ხაჩიძე"|| lastNames == "ჯოლოხავა"|| lastNames == "ჯოხაძე"|| lastNames == "ჰანდანოვიჩი"
+  ){
+    val2 = 10;
+    document.getElementById("lastName").value = `${lastNames} ${val2}`;
 
   }else{
-    goshadze = 0;
-    document.getElementById("lastName").value = `${lastNames} ${goshadze}`;
+    val2 = 0;
+    document.getElementById("lastName").value = `${lastNames} ${val2}`;
 
   }
 
   const countrys = localStorage.getItem("country");
-  if(countrys == "განა"){
-    gana = 10;
-    document.getElementById("country").value = `${countrys} ${gana}`;
+  if(countrys == "განა" || countrys == "გერმანია" || countrys == "ავსტრია"|| countrys == "ამერიკა"|| countrys == "ბულგარეთი"|| countrys == "ბელგია"|| countrys == "დანია"|| countrys == "ესტონეთი"|| countrys == "ესპანეთი"|| countrys == "ვატიკანი"|| countrys == "ვენესუელა"|| countrys == "ვიეტნამი"|| countrys == "ზამბია"|| countrys == "ზიმბაბვე"|| countrys == "თურქეთი"|| countrys == "თურქმენეთი"|| countrys == "იტალია"|| countrys == "ისრაელი"|| countrys == "ისლანდია"|| countrys == "ირლანდია"|| countrys == "იაპონია"|| countrys == "ირანი"|| countrys == "კანადა"|| countrys == "კენია"|| countrys == "კოსტა-რიკა"|| countrys == "კორეა"|| countrys == "ლატვია"|| countrys == "ლაოსი"|| countrys == "ლუქსემბურგი"|| countrys == "მადაგასკარი"|| countrys == "მალაიზია"|| countrys == "მონღოლეთი"|| countrys == "მოლდოვა"|| countrys == "მექსიკა"|| countrys == "ნეპალი"|| countrys == "ნიდერლანდები"|| countrys == "ნორვეგია"|| countrys == "ომანი"|| countrys == "პაკისტანი"|| countrys == "პოლონეთი"|| countrys == "პორტუგალია"|| countrys == "ჟ"|| countrys == "რუმინეთი"|| countrys == "რუსეთი"|| countrys == "რუანდა"|| countrys == "საბერძნეთი"|| countrys == "საფრანგეთი"|| countrys == "სან-მარინო"|| countrys == "სამხრეთ კორეა"|| countrys == "საქართველო"|| countrys == "სენეგალი"|| countrys == "ავსტრალია"|| countrys == "ავღანეთი"|| countrys == "აზერბაიჯანი"|| countrys == "ალბანეთი"|| countrys == "ალჟირი"|| countrys == "არგენტინა"|| countrys == "სირია"|| countrys == "სუდანი"|| countrys == "სომხეთი"|| countrys == "ტაივანი"|| countrys == "ტანზანია"|| countrys == "ტაჯიკეთი"|| countrys == "ტუნისი"|| countrys == "უგანდა"|| countrys == "უკრაინა"|| countrys == "ურუგვაი"|| countrys == "უნგრეთი"|| countrys == "ფიჯი"|| countrys == "ფარერები"|| countrys == "ქუვეითი"|| countrys == "ყაზახეთი"|| countrys == "ყირგიზეთი"|| countrys == "შვეიცარია"|| countrys == "შვედეთი"|| countrys == "ჩეხეთი"|| countrys == "ჩილე"|| countrys == "ჩინეთი"|| countrys == "ც"|| countrys == "ხორვატია"|| countrys == "ჯიბუტი"|| countrys == "ჰაიტი" || countrys == "ჰონდურასი"
+  ){
+    val3 = 10;
+    document.getElementById("country").value = `${countrys} ${val3}`;
 
   }else{
-    gana = 0;
-    document.getElementById("country").value = `${countrys} ${gana}`;
+    val3 = 0;
+    document.getElementById("country").value = `${countrys} ${val3}`;
 
   }
   
   const citys = localStorage.getItem("city");
-  if(citys == "გორი"){
-    gori = 10;
-    document.getElementById("city").value = `${citys} ${gori}`;
+  if(citys == "გორი" || citys == "გაგრა" || citys == "ჩხოროწყუ" || citys == "შეფილდი" || citys == "ყაზბეგი" || citys == "ამსტერდამი" || citys == "ათენი"|| citys == "ბათუმი"|| citys == "ბრიუსელი"|| citys == "დელი"|| citys == "დუბაი"|| citys == "ერევანი"|| citys == "ვოლგოგრადი"|| citys == "ვენა"|| citys == "ვილნიუსი"|| citys == "ზუგდიდი"|| citys == "ზესტაფონი"|| citys == "თბილისი"|| citys == "თეირანი"|| citys == "თელავი"|| citys == "იერუსალიმი"|| citys == "კიევი"|| citys == "კიშინოვი"|| citys == "ლონდონი"|| citys == "ლისაბონი"|| citys == "ლუბლიანა"|| citys == "მინსკი"|| citys == "მონაკი"|| citys == "ნიუ-იორკი"|| citys == "ბერლინი"|| citys == "ონი"|| citys == "პეტერბურგი"|| citys == "ჟენევა"|| citys == "რეიკიავიკი"|| citys == "სეული"|| citys == "ტფილისი"|| citys == "ტალინი"|| citys == "უ"|| citys == "ფოთი"|| citys == "ქაბული"|| citys == "ღ"|| citys == "ყირიმი"|| citys == "შირდი"|| citys == "ჩ"|| citys == "ც"|| citys == "ძ"|| citys == "წ"|| citys == "ჭ"|| citys == "ჯ"|| citys == "ხაშური"|| citys == "ჰ"|| citys == "ვადუცი"|| citys == "პარიზი"|| citys == "რომი"|| citys == "მადრიდი"|| citys == "ოსლო"|| citys == "ჰელსინკი"|| citys == "კოპენჰაგენი"|| citys == "სტოკჰოლმი"|| citys == "ნიქოზია"|| citys == "ქუთაისი" ){
+    val4 = 10;
+    document.getElementById("city").value = `${citys} ${val4}`;
 
   }else{
-    gori = 0;
-    document.getElementById("city").value = `${citys} ${gori}`;
+    val4 = 0;
+    document.getElementById("city").value = `${citys} ${val4}`;
     
   }
   
   const animals = localStorage.getItem("animal");
-  if(animals == "გორილა"){
-    gorila = 10;
-    document.getElementById("animal").value = `${animals} ${gorila}`;
+  if(animals == "გორილა" || animals== "აქლემი" || animals== "ბუ" || animals== "გუგული" || animals== "დათვი" || animals== "ენოტი" || animals== "ვირი" || animals== "ზებრა" || animals== "თუთიყუში" || animals== "ირემი" || animals== "კოალა" || animals== "ლომი" || animals== "მაიმუნი" || animals== "ნიანგი" || animals== "ოპოსუმი" || animals== "პინგვინი" || animals== "ჟირაფი" || animals== "რ" || animals== "სპილო" || animals== "ტურა" || animals== "უ" || animals== "ფარშევანგი" || animals== "ქამელეონი" || animals== "ღორი" || animals== "ყანჩა" || animals== "ჩიტი" || animals== "ცხენი" || animals== "ძროხა" || animals== "წიწილა" || animals== "ჭია"|| animals== "ჯორი"|| animals== "ხვლიკი"|| animals== "ჰიპოპოტამი" || animals== "თაგვი" || animals== "შევარდენი"
+  ){
+    val5 = 10;
+    document.getElementById("animal").value = `${animals} ${val5}`;
 
   }else{
-    gorila = 0;
-    document.getElementById("animal").value = `${animals} ${gorila}`;
+    val5 = 0;
+    document.getElementById("animal").value = `${animals} ${val5}`;
 
   }
   
   const plants = localStorage.getItem("plant");
-  if(plants == "გოგრა"){
-    gogra = 10;
-    document.getElementById("plant").value = `${plants} ${gogra}`;
+  if(plants == "გოგრა" || plants == "გარგარი" || plants == "ატამი" || plants == "ბალი" || plants == "ალუბალი" || plants == "დაფნა" || plants == "ენძელა" || plants == "ვერხვი" || plants == "ზამბახი" || plants == "თუთა" || plants == "ია" || plants == "კაკალი" || plants == "ლიმონი" || plants == "მარწყვი" || plants == "ნიორი" || plants == "ომბალო" || plants == "პრასი" || plants == "ჟოლო" || plants == "რკო" || plants == "სტაფილო" || plants == "ტიტა" || plants == "ურნაბი" || plants == "ფორთოხალი" || plants == "ქოქოსი" || plants == "ღოღნაშო" || plants == "ყაყაჩო" || plants == "შვრია" || plants == "ჩაი" || plants == "ცაცხვი" || plants == "ძირა" || plants == "წიწაკა" || plants == "ჭადარი"|| plants == "ჯონჯოლი"|| plants == "ხახვი"|| plants == "ჰ" ){
+    val6 = 10;
+    document.getElementById("plant").value = `${plants} ${val6}`;
     
 
   }else{
-    gogra = 0;
-    document.getElementById("plant").value = `${plants} ${gogra}`;
+    val6 = 0;
+    document.getElementById("plant").value = `${plants} ${val6}`;
   
   }
-  let sum = gio + goshadze + gana + gori + gorila + gogra   
+  let sum = val1 + val2 + val3 + val4 + val5 + val6  
   console.log(sum)
   document.getElementById("sumOf").value = `${sum}`;
  
@@ -344,10 +344,3 @@ function randomLeter(letters) {
 }
 
 document.querySelector("#demo").innerHTML = randomLeter(letters);
-
-
-
-
-
-
-
