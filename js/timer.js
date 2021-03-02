@@ -128,6 +128,13 @@ function addDiv() {
 };
 
 
+//Go to Quiz
+let quiz = document.querySelector('#quiz')
+quiz.onclick = function(){
+  window.location.pathname = "/quiz.html";
+  
+}
+
 
 
 
@@ -211,6 +218,9 @@ function eyeFunc(){
 
 
 }
+
+
+
 
 // Read only elements func
 function readByElements(){

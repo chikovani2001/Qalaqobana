@@ -40,6 +40,11 @@
   color: red;
 }
 
+#quiz{
+  display: flex;
+  justify-content: center;
+}
+
 .base-timer__label {
   position: absolute;
   width: 150px;
