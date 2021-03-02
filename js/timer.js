@@ -63,9 +63,10 @@ finish.onclick = function() {
   window.location.reload();
 }
 
-let trueVariable = "10";
-let trueOnlyVariable = "15";
-let falseVariable = "0";
+
+// inputs
+// let trueVariable = 10;
+// let falseVariable = 0;
 
 
 let stop = document.querySelector('#stop')
@@ -102,30 +103,28 @@ stop.onclick = function(){
 
 }
 
+//  To see result
 let more = document.querySelector('#more')
 more.onclick = function(){
   addDiv();
   readByElements();
   eyeFunc();
 } 
+//  Refreshing for timer reseting
+
 let refreshGame = document.querySelector('#refreshGame')
 refreshGame.onclick = function(){
   resetTimer();
 }
-// const mahi_holder = document.querySelector('.mahi_holder').value;
-// const append = document.querySelector('.append')
-// const div = document.createElement('div')
-// div.textContent = "aqanea smn"
-// div.appendChild(div, mahi_holder)
-// append.appendChild(div)
 
 
+
+// ADD Div !
 function addDiv() {
   const row = document.querySelectorAll('.container');
   row.forEach(rows => {
     var objTo = document.getElementById('container1');
     var divtest = document.createElement("div");
-    console.log(rows);
     divtest.innerHTML = rows.innerHTML;
     objTo.append(divtest);
   })
@@ -135,99 +134,85 @@ function addDiv() {
 
 
 
-let gio = trueOnlyVariable;
-let goshadze = trueVariable;
-let gana = trueOnlyVariable;
-let gori = trueVariable;
-let gorila = trueVariable;
-let gogra = trueVariable;
 
+// sums , gets items from local storage and cheks with db.json
 function eyeFunc(){
-  let names = localStorage.getItem("name");
+  const names = localStorage.getItem("name");
   if(names == "გიო"){
-    let gio = trueOnlyVariable;
+    gio = 10;
     document.getElementById("name").value = `${names} ${gio}`;
+
 
   }else{
-    let gio = falseVariable;
+    gio = 0;
     document.getElementById("name").value = `${names} ${gio}`;
-
   }
   
 
-  let lastNames = localStorage.getItem("lastName");
+  const lastNames = localStorage.getItem("lastName");
   if(lastNames == "გოშაძე"){
-    let goshadze = trueVariable;
-
+    goshadze = 10;
     document.getElementById("lastName").value = `${lastNames} ${goshadze}`;
 
   }else{
-    let goshadze = falseVariable;
+    goshadze = 0;
     document.getElementById("lastName").value = `${lastNames} ${goshadze}`;
 
   }
 
-  let countrys = localStorage.getItem("country");
+  const countrys = localStorage.getItem("country");
   if(countrys == "განა"){
-    let gana = trueOnlyVariable;
+    gana = 10;
     document.getElementById("country").value = `${countrys} ${gana}`;
 
   }else{
-    let gana = falseVariable;
+    gana = 0;
     document.getElementById("country").value = `${countrys} ${gana}`;
 
   }
   
-  let citys = localStorage.getItem("city");
+  const citys = localStorage.getItem("city");
   if(citys == "გორი"){
-    let gori = trueVariable;
+    gori = 10;
     document.getElementById("city").value = `${citys} ${gori}`;
 
   }else{
-    let gori = falseVariable;
+    gori = 0;
     document.getElementById("city").value = `${citys} ${gori}`;
-
+    
   }
   
-  let animals = localStorage.getItem("animal");
+  const animals = localStorage.getItem("animal");
   if(animals == "გორილა"){
-    let gorila = trueVariable;
+    gorila = 10;
     document.getElementById("animal").value = `${animals} ${gorila}`;
 
   }else{
-    let gorila = falseVariable;
+    gorila = 0;
     document.getElementById("animal").value = `${animals} ${gorila}`;
 
   }
   
-  let plants = localStorage.getItem("plant");
+  const plants = localStorage.getItem("plant");
   if(plants == "გოგრა"){
-    let gogra = trueVariable;
+    gogra = 10;
     document.getElementById("plant").value = `${plants} ${gogra}`;
+    
 
   }else{
-    let gogra = falseVariable;
+    gogra = 0;
     document.getElementById("plant").value = `${plants} ${gogra}`;
   
   }
-  let sum = Number(gio) +Number(goshadze) +Number(gana) +Number(gori)+Number(gorila)+Number(gogra)
+  let sum = gio + goshadze + gana + gori + gorila + gogra   
   console.log(sum)
-  
+  document.getElementById("sumOf").value = `${sum}`;
+ 
+
+
 }
 
-  
-  
-
-
-
-
-
-// let eye = document.querySelector('#eye')
-// eye.onclick = function(){
-//   eyeFunc();
-//   readByElements();
-
-// }
+// Read only elements func
 function readByElements(){
   document.getElementById("name").readOnly = true;
   document.getElementById("lastName").readOnly = true;
@@ -238,6 +223,8 @@ function readByElements(){
 }
 
 
+
+//Timer Func
 function onTimesUp() {
   clearInterval(timerInterval);
 }
@@ -314,7 +301,7 @@ function resetTimer(){
 }
 
 
-
+// Random massive and function
 
 const letters = [
     'ა', 
