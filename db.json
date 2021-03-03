@@ -23,6 +23,12 @@
       "password": "123456",
       "born": "25/02/2001",
       "id": 4
+    },
+    {
+      "username": "k@mail.ru",
+      "password": "ku123456",
+      "born": "09/03/2021",
+      "id": 5
     }
   ],
   "bases": [

@@ -21,12 +21,16 @@ const COLOR_CODES = {
 
 
 
-
-const TIME_LIMIT = 60;
+const TIME_LIMIT = 30;
 let timePassed = 0;
 let timeLeft = TIME_LIMIT;
 let timerInterval = null;
 let remainingPathColor = COLOR_CODES.info.color;
+
+
+
+
+
 
 document.getElementById("app").innerHTML = `
 <div class="base-timer">
@@ -56,12 +60,19 @@ document.getElementById("app").innerHTML = `
 let start = document.querySelector('#start')
 start.onclick = function(){
   startTimer();
+  
 }
 
 let finish = document.querySelector('#finish')
 finish.onclick = function() {
   window.location.reload();
 }
+let del = document.querySelector('#remove')
+del.onclick = function(){
+  localStorage.clear();
+}
+
+
 
 
 
@@ -115,6 +126,10 @@ refreshGame.onclick = function(){
 
 
 
+
+
+
+
 // ADD Div !
 function addDiv() {
   const row = document.querySelectorAll('.container');
@@ -126,18 +141,6 @@ function addDiv() {
   })
 
 };
-
-
-//Go to Quiz
-let quiz = document.querySelector('#quiz')
-quiz.onclick = function(){
-  window.location.pathname = "/quiz.html";
-  
-}
-
-
-
-
 // sums , gets items from local storage and cheks if inputs are right 
 function eyeFunc(){
   const names = localStorage.getItem("name");
